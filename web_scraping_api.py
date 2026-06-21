@@ -40,3 +40,9 @@ async def getHeadliines(headlines:list = Depends(updatedHeadlines)):
          "headlines":headlines
      }
 
+@app.get("/")
+def  healthCheck():
+    return {
+        "server":"Healthy"
+    }
+
